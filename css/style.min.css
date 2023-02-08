@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img, picture {
+  display: block;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Make images easier to work with */
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  color: hsl(0deg, 36%, 70%);
+  background: linear-gradient(135deg, hsl(0deg, 0%, 100%), hsl(0deg, 100%, 98%));
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 0;
+}
+body .main-content {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  column-gap: 0;
+  row-gap: 0;
+}
+@media (min-width: 900px) {
+  body .main-content {
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    grid-template-columns: 1fr 0.7fr;
+    grid-template-rows: 200px 1fr;
+    column-gap: 0;
+    row-gap: 0;
+  }
+}
+body .main-content .patter {
+  display: none;
+}
+@media (min-width: 900px) {
+  body .main-content .patter {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+body .main-content .logo {
+  padding-block: 2.5rem;
+  padding-inline-start: 2.49rem;
+  width: max(150px, 20%);
+  height: 120px;
+}
+@media (min-width: 900px) {
+  body .main-content .logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-block-start: 1.5rem;
+    margin-inline: 10.4rem;
+    padding-inline-start: 0;
+  }
+}
+body .main-content .showcase-picture {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 900px) {
+  body .main-content .showcase-picture {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+}
+body .main-content .showcase-picture img {
+  width: 100%;
+}
+body .main-content .showcase {
+  padding-block-start: 3.8rem;
+  padding-inline: 2.49rem;
+}
+@media (min-width: 900px) {
+  body .main-content .showcase {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-inline: 10.4rem;
+    text-align: start;
+    padding-block-start: 2rem;
+  }
+}
+body .main-content .showcase .main-heading {
+  color: inherit;
+  font-family: inherit;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.7rem;
+  line-height: 2.6rem;
+  padding-block-end: 1rem;
+}
+body .main-content .showcase .main-heading span {
+  color: hsl(0deg, 6%, 24%);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+}
+@media (min-width: 900px) {
+  body .main-content .showcase .main-heading {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+body .main-content .showcase .content {
+  font-weight: 400;
+  font-size: 14px;
+  padding-block-end: 2.5rem;
+}
+@media (min-width: 900px) {
+  body .main-content .showcase .content {
+    padding-inline-end: 8rem;
+    padding-block-start: 1rem;
+  }
+}
+body .main-content form {
+  position: relative;
+}
+@media (min-width: 900px) {
+  body .main-content form {
+    margin-inline-end: 9rem;
+  }
+}
+body .main-content form #e-mail {
+  border-radius: 100vw;
+  padding-block: 0.8rem;
+  padding-inline-start: 1rem;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid hsla(0deg, 6%, 24%, 0.2);
+  background-color: inherit;
+}
+body .main-content form ::placeholder {
+  color: hsl(0deg, 36%, 70%);
+  font-weight: 300;
+}
+body .main-content form button {
+  position: absolute;
+  bottom: 0;
+  right: -0.7rem;
+  height: 100%;
+  padding-inline: 1.7rem;
+  padding-block: 0.9rem;
+  border-radius: 100vw;
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  border: none;
+}
+body .main-content form button:active {
+  background: linear-gradient(135deg, hsl(0deg, 71%, 93%), hsl(0deg, 80%, 86%));
+  box-shadow: 0 2px 5px 1px hsl(0deg, 71%, 93%);
+}
+body .main-content form .error-icon {
+  position: absolute;
+  bottom: 50%;
+  right: 5rem;
+  transform: translateY(50%);
+  display: none;
+}/*# sourceMappingURL=style.min.css.map */
